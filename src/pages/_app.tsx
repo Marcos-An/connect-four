@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import { GameContextProvider } from 'src/Contexts/gameContext'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +8,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Connect-Four</title>
       </Head>
-      <Component {...pageProps} />
+      <GameContextProvider>
+        <Component {...pageProps} />
+      </GameContextProvider>
     </div>
   )
 }
