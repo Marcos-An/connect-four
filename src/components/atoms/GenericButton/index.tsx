@@ -1,5 +1,13 @@
 import styles from './genericButton.module.scss'
 
-export function HeaderButton({ children }: { children: React.ReactNode }) {
-  return <button className={styles.button}>{children}</button>
+interface props {
+  children: React.ReactNode
+  onClick?: Function
+}
+export function HeaderButton({ children, onClick }: props) {
+  return (
+    <button className={styles.button} onClick={() => onClick()}>
+      {children}
+    </button>
+  )
 }

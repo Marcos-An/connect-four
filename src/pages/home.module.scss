@@ -1,0 +1,44 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 1rem;
+  padding-top: 10rem;
+}
+
+.playerVsCpu,
+.playerVsPlayer,
+.gameRules {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  border: 4px solid var(--black);
+  box-shadow: 0px 0.5rem 0px var(--black);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.playerVsCpu {
+  margin-top: 4rem;
+  color: var(--white);
+  background-color: var(--color-player-one);
+}
+
+.playerVsPlayer {
+  background-color: var(--color-player-two);
+}
+
+.gameRules {
+  background-color: var(--white);
+}

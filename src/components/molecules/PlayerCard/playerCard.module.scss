@@ -46,9 +46,9 @@
 .smileContainerPlayerOner,
 .smileContainerPlayerTwo {
   width: 30px;
-  height: 15px; /* as the half of the width */
-  border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
-  border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+  height: 15px;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
   border: 3px solid var(--black);
   border-top: 0;
   padding: 0 0.2rem;

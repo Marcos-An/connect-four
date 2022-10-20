@@ -1,0 +1,101 @@
+.iconsContainer {
+  display: flex;
+}
+
+.leftFaceIconPlayerVsCPUIcon,
+.rightFaceIconPlayerVsCPUIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 100%;
+
+  border: 2px solid var(--white);
+  margin-left: -8px;
+  background-color: var(--color-player-one);
+}
+.leftFaceIconPlayerVsCPUIcon {
+  z-index: 1;
+}
+
+.leftEyesPlayerVsCPUIcon,
+.rightEyesPlayerVsCPUIcon {
+  display: flex;
+  gap: 0.4rem;
+
+  div {
+    width: 4px;
+    height: 6px;
+    background-color: var(--white);
+    border-radius: 1rem;
+  }
+}
+
+.rightEyesPlayerVsCPUIcon {
+  div {
+    width: 4px;
+    height: 2px;
+  }
+}
+
+.leftSmileContainerPlayerVsCPUIcon {
+  width: 1.3rem;
+  height: 0.6rem;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  border: 3px solid var(--white);
+  border-top: 0;
+  margin-top: 0.3rem;
+}
+
+.rightSmileContainerPlayerVsCPUIcon {
+  width: 1.3rem;
+  border: 2px solid var(--white);
+  border-top: 0;
+  margin-top: 0.3rem;
+}
+
+//PLAYER X PLAYER
+.leftFaceIconPlayerVsPlayerIcon,
+.rightFaceIconPlayerVsPlayerIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 100%;
+
+  border: 2px solid var(--black);
+  margin-left: -8px;
+  background-color: var(--color-player-two);
+}
+
+.leftFaceIconPlayerVsPlayerIcon {
+  z-index: 1;
+}
+
+.eyesPlayerVsPlayerIcon {
+  display: flex;
+  gap: 0.3rem;
+  margin-left: 0.3rem;
+  div {
+    width: 4px;
+    height: 6px;
+    background-color: var(--black);
+    border-radius: 1rem;
+  }
+}
+
+.smileContainerPlayerVsPlayerIcon {
+  width: 1.3rem;
+  height: 0.6rem;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  border: 3px solid var(--black);
+  border-top: 0;
+  margin-top: 0.3rem;
+  transform: rotate(10deg);
+}
