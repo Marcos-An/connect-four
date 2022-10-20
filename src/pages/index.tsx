@@ -5,6 +5,7 @@ import {
 } from '@components/molecules/MenuIcons'
 import styles from './home.module.scss'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 export default function Home() {
   const router = useRouter()
