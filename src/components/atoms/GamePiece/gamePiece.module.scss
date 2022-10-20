@@ -1,0 +1,27 @@
+.default,
+.playerOne,
+.playerTwo {
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid var(--black);
+  border-radius: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.default {
+  background-color: var(--color-primary);
+  box-shadow: inset 0px 0.7rem 0px var(--black);
+}
+
+.playerOne {
+  background-color: var(--color-player-one);
+  box-shadow: inset 0px 0.4rem 0px rgba(0, 0, 0, 0.3);
+}
+
+.playerTwo {
+  background-color: var(--color-player-two);
+  box-shadow: inset 0px 0.4rem 0px rgba(0, 0, 0, 0.3);
+}
