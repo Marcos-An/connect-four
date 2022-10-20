@@ -34,6 +34,18 @@ export function Board() {
     ) {
       alert('Player ' + player + ' wins')
     }
+
+    if (checkDrawn()) {
+      alert('draw')
+    }
+  }
+
+  const checkDrawn = () => {
+    let isDrawn = board.filter(
+      (row) => row.filter((item) => item.player === undefined).length > 0
+    )
+
+    return isDrawn.length > 0 ? false : true
   }
 
   const checkDiagonalRight = (
@@ -41,9 +53,9 @@ export function Board() {
     cellIndex: number,
     currentPlayer: number
   ) => {
-    var rowStartFrom = lineIndex
-    var columnStartFrom = cellIndex
-    var consecutiveCells = 0
+    let rowStartFrom = lineIndex
+    let columnStartFrom = cellIndex
+    let consecutiveCells = 0
 
     for (let j = 0; j < board.length; j++) {
       const line = board[lineIndex - j]
@@ -82,9 +94,9 @@ export function Board() {
     currentPlayer: number
   ) => {
     const indexDiff = lineIndex + 1 - (cellIndex + 1)
-    var rowStartFrom = 0
-    var columnStartFrom = 0
-    var consecutiveCells = 0
+    let rowStartFrom = 0
+    let columnStartFrom = 0
+    let consecutiveCells = 0
 
     if (indexDiff > 0) {
       rowStartFrom = indexDiff
@@ -112,7 +124,7 @@ export function Board() {
   }
 
   const checkColumn = (cellIndex: number, currentPlayer: number) => {
-    var consecutiveCells = 0
+    let consecutiveCells = 0
 
     for (let i = 0; i < board.length; i++) {
       if (board[i][cellIndex].player === currentPlayer) {
@@ -129,7 +141,7 @@ export function Board() {
   }
 
   const checkLine = (lineIndex: number, currentPlayer: number) => {
-    var consecutiveCells = 0
+    let consecutiveCells = 0
 
     for (let i = 0; i < board[lineIndex].length; i++) {
       if (board[lineIndex][i].player === currentPlayer) {

@@ -1,0 +1,84 @@
+.container {
+  height: 150px;
+  width: 150px;
+  border-radius: 2rem;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 0px 9px 0px var(--black);
+  padding: 0.7rem;
+  padding-top: 2rem;
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1,
+  h3 {
+    margin: 0;
+  }
+}
+
+.faceIconPlayerOne,
+.faceIconPlayerTwo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 100%;
+
+  border: 2px solid var(--black);
+  box-shadow: 0px 3px 0px var(--black);
+}
+
+.faceIconPlayerOne {
+  background-color: var(--color-player-one);
+}
+.faceIconPlayerTwo {
+  background-color: var(--color-player-two);
+}
+
+.smileContainerPlayerOner,
+.smileContainerPlayerTwo {
+  width: 30px;
+  height: 15px; /* as the half of the width */
+  border-bottom-left-radius: 110px; /* 100px of height + 10px of border */
+  border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+  border: 3px solid var(--black);
+  border-top: 0;
+  padding: 0 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.smileContainerPlayerOner {
+  transform: rotate(15deg);
+}
+
+.smileContainerPlayerTwo {
+  transform: rotate(-15deg);
+}
+
+.eyesPlayerOne,
+.eyesPlayerTwo {
+  display: flex;
+  gap: 0.4rem;
+
+  div {
+    width: 4px;
+    height: 6px;
+    background-color: var(--black);
+    border-radius: 1rem;
+  }
+}
+.eyesPlayerOne {
+  margin-left: 0.7rem;
+}
+
+.eyesPlayerTwo {
+  margin-right: 0.7rem;
+}
