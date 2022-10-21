@@ -2,8 +2,13 @@ import { Logo } from '@components/atoms/Logo'
 import { HeaderButton } from '@components/atoms/GenericButton'
 import styles from './header.module.scss'
 import { useRouter } from 'next/router'
+import { useContext } from 'react'
+import { GameContext } from 'src/Contexts/gameContext'
 
 export function Header() {
+  const gameContext = useContext(GameContext)
+  const { restart } = gameContext
+
   const router = useRouter()
 
   const goTo = (url: string) => {
@@ -14,7 +19,7 @@ export function Header() {
     <div className={styles.container}>
       <HeaderButton onClick={() => goTo('/')}>MENU</HeaderButton>
       <Logo />
-      <HeaderButton>RESTART</HeaderButton>
+      <HeaderButton onClick={() => restart()}>RESTART</HeaderButton>
     </div>
   )
 }

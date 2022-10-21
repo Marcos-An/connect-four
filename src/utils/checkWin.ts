@@ -15,15 +15,11 @@ export const checkWin = (
     checkDiagonalRight(lineIndex, cellIndex, player, board) ||
     checkDiagonalLeft(lineIndex, cellIndex, player, board)
   ) {
-    alert('Player ' + player + ' wins')
-  }
-
-  if (checkDrawn(board)) {
-    alert('draw')
+    return true
   }
 }
 
-const checkDrawn = (board: cell[][]) => {
+export const checkDrawn = (board: cell[][]) => {
   let isDrawn = board.filter(
     (row) => row.filter((item) => item.player === undefined).length > 0
   )
