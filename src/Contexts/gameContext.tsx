@@ -32,7 +32,7 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
     playerTwo: 0
   })
   const [currentPlayer, setCurrentPlayer] = useState<number>(1)
-  const [board, setBoard] = useState(BOARD_START)
+  const [board, setBoard] = useState(JSON.parse(JSON.stringify(BOARD_START)))
 
   const playHandle = (lineIndex: number, cellIndex: number) => {
     const hasPlayerOnCell = board[lineIndex][cellIndex].player
@@ -66,8 +66,8 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
   }
 
   const restart = () => {
-    console.log(BOARD_START)
-    setBoard(BOARD_START)
+    setBoard(JSON.parse(JSON.stringify(BOARD_START)))
+    setIsPlaying(true)
   }
   return (
     <GameContext.Provider
