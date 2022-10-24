@@ -6,12 +6,12 @@ import PlayerCard from '@components/molecules/PlayerCard'
 export default function Game() {
   return (
     <div className={styles.container}>
+      <Header />
       <div className={styles.gameWrapper}>
         <div className={styles.playerOneContainer}>
           <PlayerCard player={'playerOne'} />
         </div>
         <div className={styles.boardContainer}>
-          <Header />
           <Board />
         </div>
         <div className={styles.playerTwoContainer}>

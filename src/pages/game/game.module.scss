@@ -1,5 +1,5 @@
 .container {
-  padding-top: 5.5rem;
+  padding-top: 3rem;
 }
 
 .gameWrapper {
@@ -10,17 +10,22 @@
   max-width: 1680px;
 }
 
+@media (max-width: 768px) {
+  .gameWrapper {
+  }
+}
+
 .playerOneContainer {
   display: flex;
   justify-content: flex-end;
-  padding-right: 4rem;
+  padding-right: 10%;
   align-items: center;
 }
 
 .playerTwoContainer {
   display: flex;
   justify-content: flex-start;
-  padding-left: 4rem;
+  padding-left: 10%;
 }
 
 .boardContainer {

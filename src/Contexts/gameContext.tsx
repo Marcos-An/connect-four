@@ -17,6 +17,7 @@ interface GameContextData {
   currentPlayer: number
   playHandle: (lineIndex: number, cellIndex: number) => void
   restart: () => void
+  handlePlayers: () => void
 }
 
 export const GameContext = createContext({} as GameContextData)
@@ -31,7 +32,7 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
     playerOne: 0,
     playerTwo: 0
   })
-  const [currentPlayer, setCurrentPlayer] = useState<number>(1)
+  const [currentPlayer, setCurrentPlayer] = useState<1 | 2>(1)
   const [board, setBoard] = useState(JSON.parse(JSON.stringify(BOARD_START)))
 
   const playHandle = (lineIndex: number, cellIndex: number) => {
@@ -69,9 +70,25 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
     setBoard(JSON.parse(JSON.stringify(BOARD_START)))
     setIsPlaying(true)
   }
+
+  const handlePlayers = () => {
+    if (currentPlayer == 1) {
+      setCurrentPlayer(2)
+    } else {
+      setCurrentPlayer(1)
+    }
+  }
+
   return (
     <GameContext.Provider
-      value={{ board, currentPlayer, playHandle, playersScore, restart }}
+      value={{
+        board,
+        currentPlayer,
+        playHandle,
+        playersScore,
+        restart,
+        handlePlayers
+      }}
     >
       {children}
     </GameContext.Provider>
